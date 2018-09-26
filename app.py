@@ -21,7 +21,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # create all tables .
 def create_tables():
     # create all columns and details of the  empty table .
-    sql_alchemy.create_all( )
+    sql_alchemy.create_all()
 
 
 # Register all Resources .

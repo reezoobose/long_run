@@ -5,6 +5,7 @@ from sql_alchemy_extension import sql_alchemy
 # initialize .
 sql_alchemy.init_app(app)
 
+
 # decorator  runs before app first api is fired .
 @app.before_first_request
 # create all tables .

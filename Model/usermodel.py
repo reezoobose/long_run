@@ -19,13 +19,17 @@ class UserModel(db.Model):
     password = db.Column(db.String(80))
     # user device_id where user is  registering and log in .
     device_id = db.column(db.String(80))
+    # user in game money
+    us_dollar = db.column(db.Integer)
 
     # constructor
-    def __init__(self, username, email_id, password):
+    def __init__(self, username, email_id, password, us_dollar=0, device_id=None):
         self.username = username
         self.email_id = email_id
         self.password = self.set_password(password)
         self.logged_in = False
+        self.us_dollar = us_dollar
+        self.device_id = device_id
 
     # convert the password into salt form to store in database
     @classmethod
@@ -40,7 +44,7 @@ class UserModel(db.Model):
 
     # To json
     def json(self):
-        return {'User_Name': self.username, 'Email': self.email_id}
+        return {'User_Name': self.username, 'Email': self.email_id, "Joe Games Currency": self.us_dollar}
 
     # Is user present in DataBase.
     # search is operated using user name and  email id .

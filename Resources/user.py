@@ -11,6 +11,8 @@ class UserRegister(Resource):
     register_parser.add_argument('username', type=str, required=True, help="This field cannot be blank.")
     register_parser.add_argument('password', type=str, required=True, help="This field cannot be blank.")
     register_parser.add_argument('email_id', type=str, required=True, help="This field cannot be blank.")
+    register_parser.add_argument('us_dollar', type=int, required=True, help="This field cannot be blank.")
+    register_parser.add_argument('device_id', type=int, required=True, help="This field cannot be blank.")
 
     # post method .
     @staticmethod
@@ -22,7 +24,7 @@ class UserRegister(Resource):
             # create user.
             user = UserModel(**input_data)
             # save user.
-            user.save_data( )
+            user.save_data()
             return {'message': 'user created ', 'Success_Code': 1}, 201
         else:
             return {'message': 'user already present with the email id', 'Success_Code': 0}, 400

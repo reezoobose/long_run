@@ -18,9 +18,9 @@ class UserModel(db.Model):
     # password
     password = db.Column(db.String(80))
     # user device_id where user is  registering and log in .
-    device_id = db.column(db.String(80))
+    device_id = db.Column(db.String(80))
     # user in game money
-    us_dollar = db.column(db.Integer)
+    us_dollar = db.Column(db.Integer)
 
     # constructor
     def __init__(self, username, email_id, password, us_dollar=0, device_id=None):

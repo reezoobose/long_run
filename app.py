@@ -16,13 +16,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # ----------App configuration-----------
 
-# decorator  runs before app first api is fired .
-@app.before_first_request
-# create all tables .
-def create_tables():
-    # create all columns and details of the  empty table .
-    sql_alchemy.create_all()
-
 
 # Register all Resources .
 def register_api():

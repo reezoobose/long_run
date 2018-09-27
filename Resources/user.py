@@ -46,11 +46,11 @@ class UserLogin(Resource):
         if user is not None:
             print('user found progressing for password check')
             # we need to check for the password .
-            if user.check_password(user.password, input_data['password']):
+            if user.check_password(user.password, UserModel.set_password(input_data['password'])):
                 # Mark user as a logged in .
                 user.user_logged_in(True)
                 # return success .
-                return {'user': user.json( ), 'Login': 'Success', 'Success_Code': 1}, 200
+                return {'user': user.json(), 'Login': 'Success', 'Success_Code': 1}, 200
             else:
                 return {'Login': 'UnSuccessful wrong password . ', 'Success_Code': 0}, 404
         else:

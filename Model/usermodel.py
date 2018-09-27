@@ -30,7 +30,8 @@ class UserModel(db.Model):
     # convert the password into salt form to store in database
     @classmethod
     def set_password(cls, password):
-        return generate_password_hash(password)
+            generated_hash = generate_password_hash(password)
+            return generated_hash[5:15]
 
     # check the password that is stored in data base and password enter by user are same or not .
     @classmethod

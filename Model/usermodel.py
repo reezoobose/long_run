@@ -1,7 +1,7 @@
 # import sql alchemy object .
 from sql_alchemy_extension import sql_alchemy as db
 # we need to store password in salt form .
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash, safe_str_cmp
 
 
 # class must inherit Model from sql Alchemy .
@@ -36,7 +36,7 @@ class UserModel(db.Model):
     # check the password that is stored in data base and password enter by user are same or not .
     @classmethod
     def check_password(cls, stored_password_in_db, received_password_from_user):
-        return check_password_hash(stored_password_in_db, received_password_from_user)
+        return safe_str_cmp(stored_password_in_db, received_password_from_user)
 
     # To json
     def json(self):

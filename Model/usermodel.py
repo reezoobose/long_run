@@ -115,28 +115,34 @@ class UserModel(db.Model):
        :return: a list of user under the name of leader board supplied .
         """
         user_leader_board_list = None
+        user_leader_board_name = None
         if safe_str_cmp(leader_board_name, "Newbie"):
             upper_limit = 500000
             lower_limit = 0
+            user_leader_board_name = 'Newbie'
             user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
         elif safe_str_cmp(leader_board_name, "BigMan"):
             upper_limit = 500001
             lower_limit = 1000000
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
+            user_leader_board_name = 'BigMan'
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
         elif safe_str_cmp(leader_board_name, "Businessman"):
             upper_limit = 1000001
             lower_limit = 5000000
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
+            user_leader_board_name = 'BigMan'
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
         elif safe_str_cmp(leader_board_name, "Entrepreneur"):
             upper_limit = 500000000
             lower_limit = 5000001
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
+            user_leader_board_name = 'Businessman'
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
         elif safe_str_cmp(leader_board_name, "Tycoon"):
             upper_limit = 2000000000
             lower_limit = 500000001
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).ll()
-        print(user_leader_board_list)
-        return {'User': [x.json() for x in user_leader_board_list], "Success_Code": 1}, 200
+            user_leader_board_name = 'Tycoon'
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
+        return {'Leader Board': user_leader_board_name, 'User': [x.json() for x in user_leader_board_list],
+                "Success_Code": 1}, 200
 
     # </editor-fold>
 

@@ -135,6 +135,7 @@ class UserModel(db.Model):
             upper_limit = 2000000000
             lower_limit = 500000001
             user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).ll()
+        print(user_leader_board_list)
         return {'User': [x.json() for x in user_leader_board_list], "Success_Code": 1}, 200
 
     # </editor-fold>

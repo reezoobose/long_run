@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7cbf227-e4b7-4198-8d3a-84c7104e5fd5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/usermodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/usermodel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="usermodel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="138" column="36" lean-forward="true" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+            <state relative-caret-position="448">
+              <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
               <folding>
                 <element signature="e#30#81#0" expanded="true" />
                 <element signature="e#5444#5483#0" />
@@ -227,7 +225,7 @@
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32998565" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.658" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.658" visible="true" weight="0.10671141" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.32985073" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.10134228" />
@@ -388,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="138" column="36" lean-forward="true" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+        <state relative-caret-position="448">
+          <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
           <folding>
             <element signature="e#30#81#0" expanded="true" />
             <element signature="e#5444#5483#0" />

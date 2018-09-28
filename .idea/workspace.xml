@@ -30,12 +30,21 @@
       <file leaf-file-name="usermodel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="137" column="37" lean-forward="true" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+            <state relative-caret-position="140">
+              <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
               <folding>
                 <element signature="e#30#81#0" expanded="true" />
                 <element signature="e#5444#5483#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="operators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../vnev/Lib/site-packages/sqlalchemy/sql/operators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="1011" column="8" selection-start-line="1011" selection-start-column="8" selection-end-line="1011" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -384,10 +393,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../vnev/Lib/site-packages/sqlalchemy/sql/operators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="1011" column="8" selection-start-line="1011" selection-start-column="8" selection-end-line="1011" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="137" column="37" lean-forward="true" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+        <state relative-caret-position="140">
+          <caret line="121" column="55" lean-forward="true" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
           <folding>
             <element signature="e#30#81#0" expanded="true" />
             <element signature="e#5444#5483#0" />

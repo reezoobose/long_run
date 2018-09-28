@@ -180,7 +180,7 @@ class Logout(Resource):
             # check user is logged in or not .
             if user.logged_in:
                 user.logged_in = False
-                user.save_data( )
+                user.save_data()
                 return {'message': 'User Logged out . ', 'Success_Code': 1}, 200
             else:
                 return {'message': 'User is already Logged out . ', 'Success_Code': 1}, 400
@@ -240,6 +240,6 @@ class UpdateUserMoney(Resource):
         if user is not None:
             user.us_dollar = input_data['us_dollar']
             user.save_data()
-            return {'message': user.json, 'Success_Code': 1}, 200
+            return {'message': user.json(), 'Success_Code': 1}, 200
         return {'message': 'No user found with this email id ', 'Success_Code': 0}, 404
 # </editor-fold>

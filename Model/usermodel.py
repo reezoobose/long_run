@@ -32,7 +32,7 @@ class UserModel(db.Model):
     # user device_id where user is  registering and log in .
     device_id = db.Column(db.String(80))
     # user in game money
-    us_dollar = db.Column(db.Integer)
+    us_dollar = db.Column(db.BigInteger)
 
     # </editor-fold>
 
@@ -106,11 +106,11 @@ class UserModel(db.Model):
     @classmethod
     def get_leader_board(cls, leader_board_name):
         """
-       Newbie - 0 JGD to 500,000 JGD
-       Big Man - 500,001 JGD to 1,000,000 JGD
-       Businessman - 1,000,001 JGD to 5,000,000 JGD
+       Newbie - 0 JGD to 500,000 JGD //Ok
+       Big Man - 500,001 JGD to 1,000,000 JGD //Ok
+       Businessman - 1,000,001 JGD to 5,000,000 JGD //Ok
        Entrepreneur - 5,000,001 JGD to 500,000,000 JGD
-       Tycoon - 500,000,001 JGD to 2,000,000,000 JGD
+       Tycoon - 500,000,001 JGD to 2,000,000,000 JGD //Ok
        :param leader_board_name: name of leader board .
        :return: a list of user under the name of leader board supplied .
         """
@@ -119,23 +119,28 @@ class UserModel(db.Model):
             upper_limit = 500000
             lower_limit = 0
             user_leader_board_list = cls.query.filter(cls.us_dollar.number.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all( )
+                cls.us_dollar).all()
         elif safe_str_cmp(leader_board_name, "BigMan"):
             upper_limit = 500001
             lower_limit = 1000000
             user_leader_board_list = cls.query.filter(cls.us_dollar.number.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all( )
+                cls.us_dollar).all()
         elif safe_str_cmp(leader_board_name, "Businessman"):
             upper_limit = 1000001
             lower_limit = 5000000
             user_leader_board_list = cls.query.filter(cls.us_dollar.number.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all( )
-        elif safe_str_cmp(leader_board_name, "Tycoon"):
-            upper_limit = 500000001
-            lower_limit = 2000000000
+                cls.us_dollar).all()
+        elif safe_str_cmp(leader_board_name, "Entrepreneur"):
+            upper_limit = 500000000
+            lower_limit = 5000001
             user_leader_board_list = cls.query.filter(cls.us_dollar.number.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all( )
-        return {'User': [x.json( ) for x in user_leader_board_list], "Success_Code": 1}, 200
+                cls.us_dollar).all()
+        elif safe_str_cmp(leader_board_name, "Tycoon"):
+            upper_limit = 2000000000
+            lower_limit = 500000001
+            user_leader_board_list = cls.query.filter(cls.us_dollar.number.between(upper_limit, lower_limit)).order_by(
+                cls.us_dollar).all()
+        return {'User': [x.json() for x in user_leader_board_list], "Success_Code": 1}, 200
 
     # </editor-fold>
 

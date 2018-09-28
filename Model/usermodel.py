@@ -118,28 +118,23 @@ class UserModel(db.Model):
         if safe_str_cmp(leader_board_name, "Newbie"):
             upper_limit = 500000
             lower_limit = 0
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all()
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
         elif safe_str_cmp(leader_board_name, "BigMan"):
             upper_limit = 500001
             lower_limit = 1000000
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all()
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
         elif safe_str_cmp(leader_board_name, "Businessman"):
             upper_limit = 1000001
             lower_limit = 5000000
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all()
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
         elif safe_str_cmp(leader_board_name, "Entrepreneur"):
             upper_limit = 500000000
             lower_limit = 5000001
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all()
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).all()
         elif safe_str_cmp(leader_board_name, "Tycoon"):
             upper_limit = 2000000000
             lower_limit = 500000001
-            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).order_by(
-                cls.us_dollar).all()
+            user_leader_board_list = cls.query.filter(cls.us_dollar.between(upper_limit, lower_limit)).ll()
         return {'User': [x.json() for x in user_leader_board_list], "Success_Code": 1}, 200
 
     # </editor-fold>

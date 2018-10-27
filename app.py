@@ -18,10 +18,7 @@ api = Api()
 # ---------App configuration-----------
 # allow app to debug .
 app.config['DEBUG'] = True
-app.config['FLASK_ENV '] = 'development'
 app.config['TESTING '] = True
-app.config['PROPAGATE_EXCEPTIONS '] = True
-app.config['PRESERVE_CONTEXT_ON_EXCEPTION '] = True
 app.config['TRAP_HTTP_EXCEPTIONS '] = True
 app.config['TRAP_BAD_REQUEST_ERRORS '] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')

@@ -36,7 +36,7 @@ class UserRegister(Resource):
             user = UserModel(input_data['username'],
                              input_data['email_id'],
                              input_data['password'],
-                             int(input_data['email_id']),
+                             int(input_data['us_dollar']),
                              input_data['device_id'],
                             )
             # save user.

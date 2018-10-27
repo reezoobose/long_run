@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7cbf227-e4b7-4198-8d3a-84c7104e5fd5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/usermodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/usermodel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="usermodel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="usermodel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2679">
-              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="98">
+              <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
               <folding>
                 <element signature="e#84#135#0" expanded="true" />
               </folding>
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="43" column="61" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="61" />
+            <state relative-caret-position="471">
+              <caret line="216" column="37" selection-start-line="216" selection-start-column="37" selection-end-line="216" selection-end-column="37" />
               <folding>
                 <element signature="n#!!doc" />
               </folding>
@@ -105,9 +105,9 @@
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/Model/usermodel.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/Resources/user.py" />
+        <option value="$PROJECT_DIR$/Model/usermodel.py" />
       </list>
     </option>
   </component>
@@ -615,22 +615,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
+    <entry file="file://$PROJECT_DIR$/Resources/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2679">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        <state relative-caret-position="471">
+          <caret line="216" column="37" selection-start-line="216" selection-start-column="37" selection-end-line="216" selection-end-column="37" />
           <folding>
-            <element signature="e#84#135#0" expanded="true" />
+            <element signature="n#!!doc" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/user.py">
+    <entry file="file://$PROJECT_DIR$/Model/usermodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="43" column="61" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="61" />
+        <state relative-caret-position="98">
+          <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
           <folding>
-            <element signature="n#!!doc" />
+            <element signature="e#84#135#0" expanded="true" />
           </folding>
         </state>
       </provider>

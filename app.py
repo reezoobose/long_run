@@ -18,7 +18,6 @@ api = Api()
 # ---------App configuration-----------
 # allow app to debug .
 app.config['DEBUG'] = True
-app.config['TESTING '] = True
 app.config['TRAP_HTTP_EXCEPTIONS '] = True
 app.config['TRAP_BAD_REQUEST_ERRORS '] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')

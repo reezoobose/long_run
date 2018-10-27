@@ -18,7 +18,7 @@ class UserRegister(Resource):
     register_parser.add_argument('username', type=str, required=True, help="This field cannot be blank.")
     register_parser.add_argument('password', type=str, required=True, help="This field cannot be blank.")
     register_parser.add_argument('email_id', type=str, required=True, help="This field cannot be blank.")
-    register_parser.add_argument('us_dollar', type=int, required=True, help="This field cannot be blank.")
+    register_parser.add_argument('us_dollar', type=str, required=True, help="This field cannot be blank.")
     register_parser.add_argument('device_id', type=str, required=True, help="This field cannot be blank.")
 
     # post method .
@@ -33,7 +33,12 @@ class UserRegister(Resource):
         # corresponding user exist in database
         if UserModel.find_user(input_data['email_id']) is None:
             # create user.
-            user = UserModel(**input_data)
+            user = UserModel(input_data['username'],
+                             input_data['email_id'],
+                             input_data['password'],
+                             int(input_data['email_id']),
+                             input_data['device_id'],
+                            )
             # save user.
             user.save_data()
             return {'message': 'user created ', 'Success_Code': 1}, 201

@@ -226,7 +226,7 @@ class UpdateUserMoney(Resource):
     # create a parser.
     update_user_money = reqparse.RequestParser()
     # add arguments
-    update_user_money.add_argument('us_dollar', type=int, required=True, help="This field cannot be blank.")
+    update_user_money.add_argument('us_dollar', type=str, required=True, help="This field cannot be blank.")
     update_user_money.add_argument('email_id', type=str, required=True, help="This field cannot be blank.")
 
     @classmethod

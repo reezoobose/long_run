@@ -127,8 +127,8 @@ class UserModel(db.Model):
             user_leader_board_name = 'BigMan'
             user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
         elif safe_str_cmp(leader_board_name, "Businessman"):
-            upper_limit = 1000001
-            lower_limit = 5000000
+            upper_limit = 5000000
+            lower_limit = 1000001
             user_leader_board_name = 'Businessman'
             user_leader_board_list = cls.query.filter(cls.us_dollar.between(lower_limit, upper_limit))
         elif safe_str_cmp(leader_board_name, "Entrepreneur"):
